@@ -1,2 +1,2 @@
-class Api::V1::SportsController < ApplicationFolder
+class Api::V1::SportsController < ApplicationController
 end
