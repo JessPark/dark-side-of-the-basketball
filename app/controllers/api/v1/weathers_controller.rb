@@ -1,6 +1,5 @@
 class Api::V1::WeathersController < ApplicationController
-  protect_from_forgery with: :exception
-
+  protect_from_forgery with: :null_session
 
   def index
     @weather = Weather.new(params[:city], params[:state])
