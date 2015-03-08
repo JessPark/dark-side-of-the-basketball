@@ -5,6 +5,7 @@ class Weather
 
   def current_weather(state_code, city)
     @weather = HTTParty.get("http://api.wunderground.com/api/#{ENV['WEATHER_TOKEN']}/conditions/q/#{state_code}/#{city}.json")
+    @weather["current_observation"]["weather"]
     sports_baby
   end
 
@@ -13,6 +14,10 @@ class Weather
     date
     @sport = HTTParty.get("https://api.sportsdatallc.org/ncaamb-t3/games/#{@date}/schedule.xml?api_key=#{ENV['SPORTS_TOKEN']
     }")
+    venues = @sport["league"]["daily_schedule"]["games"]["game"]
+    venues.each do |v|
+      v[:city]
+    end
   end
 
   def date
@@ -21,10 +26,8 @@ class Weather
   end
 
 
-  # def location_name
-  #   @data["current_observation"]["display_location"]["full"]
-  # end
 
-  # http://api.sportsdatallc.org/ncaamb-t3/games/2014/reg/schedule.xml?api_key=2rafzs7jut24a5za5h2sp5ya
+
+
 
 end
