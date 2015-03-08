@@ -11,12 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150306164448) do
-
-  create_table "sports_data", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20150306164425) do
 
   create_table "spotifies", force: :cascade do |t|
     t.datetime "created_at", null: false
