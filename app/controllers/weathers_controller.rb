@@ -9,8 +9,4 @@ class WeathersController < ApplicationController
     render json: weather
   end
 
-
-
-
-
 end
