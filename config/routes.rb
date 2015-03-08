@@ -1,19 +1,12 @@
 Rails.application.routes.draw do
 
-  namespace :api do
-    namespace :v1 do
-      resources :songs
-      resources :weathers
-    end
-  end
-
-  get 'weathers/index'
+  get 'api/v1/current_weather/:state_code/:city' => 'weathers#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'weather#index'
+   root 'weathers#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

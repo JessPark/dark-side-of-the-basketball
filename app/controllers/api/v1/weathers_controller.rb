@@ -2,10 +2,11 @@ class Api::V1::WeathersController < ApplicationController
   protect_from_forgery with: :null_session
 
   def index
-    @weather = Weather.new(params[:city], params[:state])
+  end
 
-    # hurricane_url = "http://api.wunderground.com/api/61823ef325ea2b77/currenthurricane/view.json"
-    # @hurricane_count = HTTParty.get(hurricane_url)["currenthurricane"].length
+  def show
+    weather = Weather.new.current_weather(params[:state_code], params[:city])
+    render json: weather
   end
 
 
