@@ -6,7 +6,6 @@ class Weather
   def current_weather(state_code, city)
     @city = city
     @weather = HTTParty.get("http://api.wunderground.com/api/#{ENV['WEATHER_TOKEN']}/conditions/q/#{state_code}/#{city}.json")
-    @weather["current_observation"]["weather"]
     sports_baby
   end
 
@@ -23,7 +22,16 @@ class Weather
       end
     end
   end
-    return cities
+  weather_sport = {}
+  weather_sport[:weather] = @weather["current_observation"]["weather"]
+  weather_sport[:venues] = cities
+
+
+
+
+
+  return weather_sport
+
   end
 
   def date
