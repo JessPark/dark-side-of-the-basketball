@@ -1,25 +1,7 @@
-# dark-side-of-the-basketball
+# Dark Side of the Basketball
+##Description:
+Dark Side of the Basketball is a Ruby/Rails app that combines two APIs to let you know if your city has any NCAA men's basketball games scheduled, and the weather!  
 
-Novel API
-Description
-
-Create a Rails application which presents a novel (unique, new) API to the world. This API must consume at least two other, publicly available APIs.
-
-Deliverables
-
-+A Github Organization. Create an organization in github to represent your team for this project. Give all team members full rights.
-+A Repository. Create a repository in your github organization.
--A Heroku App. Your application should be deployed and running on Heroku.
--A Test Suite. Your application should be developed using test driven development. It is up to you whether you use ping-pong pairing.
--A README. Your README should describe the API and provide instructions for others on how to use it.
-
-Normal Mode
-
-For this project, you have complete autonomy on the data that your application displays, the sources of that data, and the behavior that your application has. The conditions for this assignment are:
-
--You must consume at least two publicly available APIs on two different data sets (e.g. two API requests from the Github API are not sufficient). A few links to public -data set directories are given below.
--You must merge this data in some meaningful and interesting way.
--You must display this merged data in a JSON API of your own making. The api must be accessible under /api/v1/.
--You must write clear API documentation in your README.
--Your application must be deployed and working on Heroku.
--Authentication is optional.
+##Details:
+Dark Side of the Basketball is built with Rails 4.2.0 and includes several gems. Please bundle install after downloading from GitHub. To find this app on Heroku, please visit  https://dark-side-of-the-basketball.herokuapp.com/api/v1/current_weather/{state code}/{city}, replacing {state code with the two-letter abbreviation for your state and {city} with the city. For instance,
+https://dark-side-of-the-basketball.herokuapp.com/api/v1/current_weather/ny/albany would tell you the daily scheduled games and the weather in the city of Albany, NY.
